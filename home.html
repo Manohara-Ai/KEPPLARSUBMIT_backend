@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keplar's Submit | EPOCH'25</title>
+  <link rel="stylesheet" href="static/css/styles.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="https://teamdhruva.com" target="_blank">
+        <img src="static/images/dhruva.png" alt="Home" class="logo"/>
+      </a>
+    </div>
+    <div class="title-container">
+      <h1>KEPLAR'S SUMMIT</h1>
+      <p class="subtitle">EPOCH' 25</p>
+    </div>
+    <nav class="nav">
+      <button class="leaderboard-link">Leaderboard</button>
+      <button class="logout">Logout</button>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="info-box">
+      <h2>Event Overview & Guidelines</h2>
+      <ul>
+        <li>🌌 <strong>Theme:</strong> Exoplanets</li>
+        <li>👥 <strong>Team size:</strong> 3 members</li>
+        <li>📱 Mobile phones must be on silent mode inside the arena.</li>
+        <li>💡 Use your knowledge and think creatively.</li>
+        <li>🔒 Respect the time limits for each round.</li>
+        <li>🤝 Collaborate respectfully with fellow participants and volunteers.</li>
+        <li>⏱️ <strong>Duration:</strong> 4 hours total</li>
+      </ul>
+    </section>
+
+    <section class="info-box">
+        <h2>Event Stages and Guidelines</h2>
+        <ul>
+            <li>📊 <strong>Stage 1: Data Analysis & Result Submission (2 hours 30 minutes)</strong></li>
+                <p>This stage is dedicated to the analysis of provided exoplanet datasets. Participants will be required to interpret the data and submit their answers to 7 specific questions based on their findings. The allotted time for this stage is 2 hours 30 minutes. Please ensure that your results are submitted before the time limit to proceed to the next stage.</p>
+            
+            <br><br>    
+            <li>🗣️ <strong>Stage 2: Presentation by Shortlisted Teams (30 minutes)</strong></li>
+                <p>Following the completion of Stage 1, the teams with the most accurate and insightful submissions will be shortlisted. These teams will be invited to present their findings and solutions to a panel of judges. The presentation must be completed within 30 minutes, and it should highlight the key aspects of your data analysis, methodologies used, and conclusions drawn.</p>
+            
+            <br><br>
+            <li>📁 <strong>Dataset Availability</strong></li>
+                <p>Upon registration, participants will gain access to the datasets related to exoplanets, which are crucial for completing Stage 1. These datasets will provide essential information regarding the exoplanet characteristics, including but not limited to orbital periods, radii, and temperatures.</p>
+            
+            <br><br>
+            <li>📋 <strong>Answering the 7 Key Questions</strong></li>
+                <p>Participants must answer a total of 7 specific questions based on the provided dataset. These questions will require a thorough analysis of the dataset and the application of relevant data analysis techniques. The answers should be submitted in a clear, concise, and scientifically valid manner.</p>
+            
+        </ul>
+    </section>
+
+    <section class="info-box">
+      <h2>Tools & Judging</h2>
+      <ul>
+        <li>🛠️ Use any language or tool: Python, R, MATLAB, Excel, etc.</li>
+        <li>🤖 AI tools are allowed</li>
+        <li>🎯 Winners selected based on performance in both stages</li>
+      </ul>
+    </section>
+
+    <section class="info-box">
+      <h2>Submission Portal</h2>
+      <p>Find important links below:</p><br>
+      <ul>
+        <li>
+          ⬇️ 
+          <button class="download-button">
+            Click to Download Questions
+          </button>
+        </li>
+        <li>
+          ⬆️ 
+          <!-- Upload Button -->
+          <button class="upload-button">Click to Upload Answers</button>
+
+          <!-- Upload Modal -->
+          <div class="modal" id="uploadModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h3>Upload Your Answer Files</h3>
+              <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" required />
+                <button type="submit" class="upload-button">Upload</button>
+              </form>
+              <div id="uploadStatus"></div>
+            </div>
+          </div>
+          <input type="file" id="uploadInput" style="display: none;" multiple>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="static/js/script.js" defer></script>
+</body>
+</html>
