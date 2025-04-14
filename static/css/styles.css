@@ -413,6 +413,16 @@ body {
         width: 100%;
     }
 
+    /* Hide unnecessary links on small screens */
+    .logo-container {
+        display: none;
+    }
+
+    .title-container {
+        display: none;
+    }
+
+    /* Keep only necessary links visible */
     .help-link, .leaderboard-link, .home-link, .logout {
         width: 100%;
         padding: 0.8rem 1.4rem;
