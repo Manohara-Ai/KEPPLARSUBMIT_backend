@@ -397,3 +397,29 @@ body {
         margin: 1.5rem auto;
     }
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .help-link, .leaderboard-link, .home-link, .logout {
+        width: 100%;
+        padding: 0.8rem 1.4rem;
+        margin: 0.5rem 0;
+    }
+
+    .login-box {
+        margin: 1rem;
+    }
+}
