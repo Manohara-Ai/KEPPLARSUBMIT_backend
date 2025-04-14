@@ -77,11 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch("https://b8b8-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/leaderboard");
             
-            // Log the raw response text to inspect
-            const text = await response.text();
-            console.log("Raw response:", text);  // This will log the raw text content
+            console.log(response);
+            //const text = await response.text();
+            //console.log("Raw response:", text);
             
-            // Try to parse the text to JSON
             const data = JSON.parse(text);
             
             if (data && data.isLive) {
