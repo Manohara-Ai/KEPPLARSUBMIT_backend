@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('password').value;
 
             try {
-                const response = await fetch('https://e45d-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/', {
+                const response = await fetch('https://71d7-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "index.html";
         } else {
             try {
-                const response = await fetch('https://e45d-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/validateSession', {
+                const response = await fetch('https://71d7-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/validateSession', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -75,13 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function checkLeaderboard() {
         try {
-            const response = await fetch("https://e45d-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/leaderboard");
+            const response = await fetch("https://71d7-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/leaderboard");
             
-            console.log(response);
-            const rawText = await response.text();
-            console.log("Raw response:", rawText);
-            
-            const data = JSON.parse(text);
+            const result = await response.text();
+            console.log(result);
             
             if (data && data.isLive) {
                 console.log("Leaderboard is live!");
@@ -112,9 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         leaderboardButton.addEventListener('click', async function(event) {
             event.preventDefault();
-            
-            // Check leaderboard status before proceeding
-            await checkLeaderboard();
+            window.location.href = "leaderboard.html";
         });
     }
 
@@ -134,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkSession();
         downloadButton.addEventListener('click', function(event) {
             event.preventDefault();
-            window.location.href = "https://e45d-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/download";
+            window.location.href = "https://71d7-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/download";
         });
     }
 
@@ -176,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             uploadStatus.innerText = "Uploading...";
 
             try {
-                const response = await fetch("https://e45d-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/upload", {
+                const response = await fetch("https://71d7-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/upload", {
                     method: "POST",
                     body: formData
                 });
@@ -199,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
             // Notify the backend about logout
             try {
-                await fetch('https://e45d-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/logout', {
+                await fetch('https://71d7-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/logout', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
