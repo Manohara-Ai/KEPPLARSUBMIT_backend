@@ -73,11 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Define the checkLeaderboard function to validate if leaderboard is live
     async function checkLeaderboard() {
         try {
             const response = await fetch("https://b8b8-2409-408c-949e-be31-44cb-2a98-2ff2-eb5b.ngrok-free.app/leaderboard");
-            const data = await response.json();
+            
+            // Log the raw response text to inspect
+            const text = await response.text();
+            console.log("Raw response:", text);  // This will log the raw text content
+            
+            // Try to parse the text to JSON
+            const data = JSON.parse(text);
             
             if (data && data.isLive) {
                 console.log("Leaderboard is live!");
@@ -90,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Unable to check leaderboard status. Please try again later.");
         }
     }
+    
     
     // Help button event listener
     const helpButton = document.querySelector('.help-link');
